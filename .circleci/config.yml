@@ -42,6 +42,7 @@ jobs:
 
       - setup_remote_docker
       - run: docker build -t zalatnaicsongor/happyornot:latest .
+      - run: docker login --username ${DOCKER_USER} --password ${DOCKER_PASSWORD}
       - run: docker push zalatnaicsongor/happyornot:latest
 
   deploy:
