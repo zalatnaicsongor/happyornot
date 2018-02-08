@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class HappyornotProducerApplication
+class HappyornotApplication
 
 fun main(args: Array<String>) {
-    runApplication<HappyornotProducerApplication>(*args)
+    runApplication<HappyornotApplication>(*args)
 }

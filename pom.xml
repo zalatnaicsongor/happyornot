@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>hu.zalatnai</groupId>
-	<artifactId>happyornot-producer</artifactId>
+	<artifactId>happyornot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>happyornot-producer</name>
-	<description>Demo project for Spring Boot</description>
+	<name>happyornot</name>
+	<description>Happy or not</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
