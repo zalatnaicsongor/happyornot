@@ -1,10 +1,5 @@
-package hu.zalatnai.happyornotproducer
+package hu.zalatnai.happyornot
 
-import org.springframework.stereotype.Service
-
-@Service
-class ReactionPublisher {
-    fun publish(reaction: Reaction) {
-
-    }
+interface ReactionPublisher {
+    fun publish(reaction: Reaction)
 }

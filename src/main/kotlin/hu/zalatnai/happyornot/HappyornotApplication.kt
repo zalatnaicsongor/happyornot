@@ -1,4 +1,4 @@
-package hu.zalatnai.happyornotproducer
+package hu.zalatnai.happyornot
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

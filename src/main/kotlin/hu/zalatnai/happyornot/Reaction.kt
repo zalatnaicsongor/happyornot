@@ -1,5 +1,6 @@
-package hu.zalatnai.happyornotproducer
+package hu.zalatnai.happyornot
 
-enum class Reaction {
-    POSITIVE, NEGATIVE
+sealed class Reaction {
+    object Positive : Reaction()
+    object Negative : Reaction()
 }

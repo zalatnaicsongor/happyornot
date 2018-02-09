@@ -1,4 +1,4 @@
-package hu.zalatnai.happyornotproducer
+package hu.zalatnai.happyornot
 
 import org.junit.Test
 import org.junit.runner.RunWith
