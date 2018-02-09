@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class HappyOrNotController(val reactionPublisher: ReactionPublisher) {
+class HappyOrNotController(private val reactionPublisher: ReactionPublisher) {
     @PostMapping("/positive")
     fun positiveReaction() {
         reactionPublisher.publish(Reaction.Positive)
