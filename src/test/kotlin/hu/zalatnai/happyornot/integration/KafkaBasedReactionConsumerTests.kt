@@ -1,5 +1,6 @@
 package hu.zalatnai.happyornot.integration
 
+import hu.zalatnai.happyornot.ReactionConsumerStream
 import hu.zalatnai.happyornot.ReactionPublisherStream
 import hu.zalatnai.happyornot.ReactionStore
 import org.hamcrest.CoreMatchers.equalTo
@@ -19,21 +20,21 @@ import org.springframework.test.context.junit4.SpringRunner
 class KafkaBasedReactionConsumerTests {
 
     @Autowired
-    lateinit var reactionPublisherStream: ReactionPublisherStream
+    lateinit var reactionConsumerStream: ReactionConsumerStream
 
     @Autowired
     lateinit var reactionStore: ReactionStore
 
     @Test
     fun `in case of a positive reaction event the positive reaction counter is incremented`() {
-        reactionPublisherStream.reactionInput().send(GenericMessage("P"))
+        reactionConsumerStream.reactionInput().send(GenericMessage("P"))
 
         assertThat(reactionStore.positive, equalTo(1))
     }
 
     @Test
     fun `in case of a negative reaction event the negative reaction counter is incremented`() {
-        reactionPublisherStream.reactionInput().send(GenericMessage("N"))
+        reactionConsumerStream.reactionInput().send(GenericMessage("N"))
 
         assertThat(reactionStore.negative, equalTo(1))
     }

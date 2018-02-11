@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Profile
 
 @Configuration
 @Profile("kafka")
-@EnableBinding(ReactionPublisherStream::class)
+@EnableBinding(value= [(ReactionPublisherStream::class), (ReactionConsumerStream::class)])
 class HappyOrNotKafkaConfiguration {
     @Bean
     fun kafkaBasedReactionConsumer(reactionStore: ReactionStore): KafkaBasedReactionConsumer {
