@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Profile
 @Profile("local")
 class HappyOrNotLocalConfiguration {
     @Bean
-    fun inMemoryReactionPublisher() : InMemoryReactionPublisher {
-        return InMemoryReactionPublisher(ReactionStore())
+    fun inMemoryReactionPublisher(reactionStore: ReactionStore) : InMemoryReactionPublisher {
+        return InMemoryReactionPublisher(reactionStore)
     }
 }

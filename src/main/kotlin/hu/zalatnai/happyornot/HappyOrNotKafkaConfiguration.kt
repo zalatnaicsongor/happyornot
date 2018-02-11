@@ -13,9 +13,4 @@ class HappyOrNotKafkaConfiguration {
     fun kafkaBasedReactionConsumer(reactionStore: ReactionStore): KafkaBasedReactionConsumer {
         return KafkaBasedReactionConsumer(reactionStore)
     }
-
-    @Bean
-    fun reactionStore(): ReactionStore {
-        return ReactionStore()
-    }
 }
