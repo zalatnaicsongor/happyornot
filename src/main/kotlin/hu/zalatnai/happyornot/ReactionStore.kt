@@ -10,8 +10,8 @@ open class ReactionStore {
 
     open fun processReaction(reaction: Reaction) {
         when(reaction) {
-            is Reaction.Negative -> negative += 1
-            is Reaction.Positive -> positive += 1
+            Reaction.Negative -> negative += 1
+            Reaction.Positive -> positive += 1
         }
     }
 }
