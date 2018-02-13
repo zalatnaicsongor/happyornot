@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: happyornot
+  labels:
+    app: happyornot
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: happyornot
+    spec:
+      containers:
+      - name: happyornot
+        image: zalatnaicsongor/happyornot:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: kafka
+        - name: spring_cloud_stream_kafka_binder_brokers
+          value: kafka
+        - name: spring_cloud_stream_kafka_binder_zkNodes
+          value: kafka-zk
